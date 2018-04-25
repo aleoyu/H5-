@@ -1,0 +1,236 @@
+@charset "UTF-8";
+* { -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; vertical-align: baseline; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+img { border: 0 none; vertical-align: top; }
+i, em { font-style: normal; }
+ol, ul { list-style: none; }
+input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; color: #666; }
+body { margin: 0 auto; min-width: 320px; max-width: 640px; height: 100%; font-size: 14px; fon-family: -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+
+/* 容器需要有宽高 */
+html, body, #outer-container {
+  height: 100%;
+  width: 100%;
+  background: #f0ebe7;
+}
+html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: 1.4rem;/*1.4 × 10px = 14px */}
+.lg-page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.lg-trailer {
+  position: absolute;
+  z-index: 1;
+}
+.lg-component-img{
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+.totle{
+  width: 1rem;
+  line-height: 1.3rem;
+  padding: 3.5rem 1rem 2rem 1rem;
+  background: #d2011e;
+  color: #fff;
+  left: 44%;
+  position: absolute;
+  font-size: 1rem;
+  height: 55%;
+}
+/*开启滚动*/
+.setupscroll{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/**/
+.btn{
+  top: 24rem;
+  left: 8rem;
+  background: #c81814;
+  color: #fff;
+  height: 3rem;
+  line-height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 88
+}
+/*说明*/
+.instru{
+  margin-left: 2rem;
+  padding-bottom: 1rem;
+}
+.instru h3{
+  font-size: 1rem;
+  color: #000;
+  position: relative;
+}
+.instru h3 i{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url(../images/ydjd.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: -1.5rem;
+  top: 0.3rem;
+}
+.instru p{
+  font-size: .8rem;
+  color: #6a3d14;
+}
+/**/
+.lebs{
+  color: #000;
+  background: linear-gradient(to bottom, #f5bd7a 50%,#d46920 50%);
+  font-size: 1rem;
+  width: 4.5rem;
+  text-align: center;
+  border-radius: .5rem;
+  display: inline-block;
+}
+.linput{
+  height: 1.2rem;
+  border: 1px solid #ddd;
+  width: 7rem;
+  background: #fff;
+  display: inline-block;
+  padding: .2rem;
+  vertical-align: bottom;
+  margin-left: .5rem;
+  font-size: 1rem;
+}
+/*弹窗*/
+.dialog-box{
+  position: fixed;
+  z-index: 1002;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.6);
+}
+.dialog_bg{
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.alert-cont{
+  position: relative;
+  margin: auto;
+  width: 83%;
+  max-width: 472px;
+  background: #92633f;
+  background-size: 100%;
+  outline: none;
+}
+.dialog_conter{
+  background: #f0ebe7;
+  padding: 1rem;
+  margin: .2rem;
+  font-size: .8rem;
+  color: #92633f;
+}
+.dialog-txt{
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  color: #6a6a68;
+  line-height: 24px;
+}
+.dialog-btn{
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+.dialog-btn img{
+  width: 100%;
+}
+.close-btn{
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  background: url(../images/close.png) no-repeat;
+  background-size: 100%;
+  top: 4px;
+  right: 4px;
+}
+.dialog_header{
+  text-align: center;
+  padding: .5rem 0;
+  color: #fff;
+  font-size: 1rem;
+}
+.btn_award{
+  line-height: 30px;
+}
+.pfaward{
+  border-radius: 100%;
+  height: 5rem;
+  background: #fff;
+  position: relative;
+  margin: -2rem 0 0 1.5rem;
+  padding: 2rem 1rem 0 1rem;
+  width: 8rem;
+}
+.pfaward img{
+  width: 4rem;
+  position: absolute;
+  right: -1rem;
+}
+.black{
+  background: #c34a4a;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 100%;
+  position: fixed;
+  right: 10px;
+  top: 48px;
+  text-align: center;
+  z-index: 99999999;
+  color: #fff;
+  font-size: .8rem;
+}
+
+#bgm{
+	z-index: 999;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+  }
+#bgm-btn{
+	display:block;
+	cursor: pointer;
+	width: 34px;
+	height: 34px;
+	background:url("../images/musicon.png") center no-repeat;
+	background-size:100% 100%; 
+	opacity: 0.4;
+}
+#bgm-btn.active{ 
+	background:url("../images/musicoff.png"); 
+	opacity: 0.4;
+	background-size:100% 100%;
+}
+audio#myaudio{
+width: 0px;
+height: 0px;
+margin: 0;
+padding: 0;
+position: absolute;
+}
