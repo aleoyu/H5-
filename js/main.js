@@ -207,7 +207,7 @@ var swiper = new Swiper({
 })();
 
 new Progres().init(function (res) {
-  //res.loaded表示加载成功
+  //res.loaded表示加载成功 
   if (res.loaded) {
     setTimeout(function () {
       swiper.swipeNext()
