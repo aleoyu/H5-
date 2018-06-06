@@ -234,3 +234,33 @@ margin: 0;
 padding: 0;
 position: absolute;
 }
+
+/*进度条*/
+.progress {
+  width: 60%;
+  border: 1px solid #52bbfe;
+  margin: 0 auto;
+  height: 20px;
+  overflow: hidden;
+  background-color: #ffedcc;
+  border-radius: 18px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1)
+}
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;     
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease
+}
+.progress-bar-success {
+  background-color: #ffa27d;
+}

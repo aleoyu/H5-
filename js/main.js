@@ -17,7 +17,22 @@ var dialog = {
    $(".dialog-box").remove()
   }
 }
-var list = [{//0
+
+
+
+//相关的 DOM
+//<div class="loading"><div class="progress" id="progress"><div class="progress-bar progress-bar-success" style="width: 0%;"></div></div></div>
+
+var list = [
+  {//0
+    content: '<div class="lg-page">'+
+    '<div class="lg-trailer" style="animation-duration:1.47s;animation-iteration-count:1;animation-delay:.5s;left:37%;bottom: 17rem;"><img src="images/logo.png" style="width: 6rem;" class="lg-component-img"></div>' +
+    '<div class="lg-trailer" style="top: 17rem;left: 0;width: 100%;"><div class="loading"><div class="progress" id="progress"><div class="progress-bar progress-bar-success" style="width: 0%;"></div></div></div></div>'+
+    
+'</div>',
+transition:{name:'card',direction:-1}
+},
+{//0
   content: '<div class="lg-page">'+
                 '<div class="lg-trailer bounceIn" style="animation-duration: 1.47s; animation-iteration-count: 1;"><img src="images/logo.png" style="width: 5rem;margin: 1rem;" class="lg-component-img"></div>'+
                 '<div class="totle slideInDown" style="animation-delay:.1s;animation-duration: 1s; animation-iteration-count: 1; ">做有情怀的教育专业媒体</div>'+
@@ -157,7 +172,48 @@ var swiper = new Swiper({
   data: list,
   keepDefaultClasses:['removekeepd']//保持默认响应的元素 class 的白名单
 });
+/**
+ * 进度条
+ */
+(function () {
+  var imgs = document.querySelectorAll("img"),
+    imgs_len = imgs.length,
+    loaded = 0;
+  var Progres = function () { }
+  Progres.prototype = {
+    init: function (callback) {
+      var that = this
+      for (var i = 0; i < imgs_len; i++) {
+        if (imgs[i].complete == true) {//图片已加载完成
+          that.load_callback(callback);
+        } else {
+          imgs[i].onload = function () {//图片动态加载完成触发
+            that.load_callback(callback);
+          }
+        }
+      }
+    },
+    load_callback: function (callback) {
+      loaded++;
+      document.getElementsByClassName('progress-bar')[0].style.width = parseInt(loaded / imgs_len * 100) + "%"
+      if (loaded === imgs_len) {
+        callback({ loaded: true })
+        return callback
 
+      }
+    }
+  }
+  window.Progres = Progres
+})();
+
+new Progres().init(function (res) {
+  //res.loaded表示加载成功
+  if (res.loaded) {
+    setTimeout(function () {
+      swiper.swipeNext()
+    }, 1000)
+  }
+});
 
 /*点击抽奖按钮*/
 $('.ss').click(function(){
