@@ -80,7 +80,7 @@ transition:{name:'card',direction:-1}
             '</div>',
     transition:{direction:0}
   },
-  {//4 海峡教育报
+  {//4 海峡教育报 
     content:'<div class="lg-page">'+
               '<div class="removekeepd setupscroll">'+
                 '<div class="lg-trailer" style="background: #c81814;width: 100%;height: 1rem;"></div>'+
