@@ -67,7 +67,7 @@ transition:{name:'card',direction:-1}
             '</div>',
     transition:{direction:0}
   },
-  {//3 500M
+  {//3 500M 
     content:'<div class="lg-page">'+
               '<div class="removekeepd setupscroll">'+
                 '<div class="lg-trailer" style="background: #c81814;width: 100%;height: 1rem;"></div>'+
